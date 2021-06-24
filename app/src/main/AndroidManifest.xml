@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.birdsoft.ecocleaningservicos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:theme="@style/AppTheme.HomeIniciar"
+            android:name=".view.SistemaUrlActivity">
+            <intent-filter android:autoVerify="true"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.appecocleaningservicos.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ConfiguracoesActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".view.SelecionadorServicosUnicoActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".view.FavoritosActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".view.ContaActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".view.VisualizarServicoIndivitualActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".view.NotificacoesActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".view.ContratosActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".view.CarrinhoActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".view.SelecionadorServicosItensActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".view.BloqueadoActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".login.BaseViewLoginActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".login.BaseViewActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.HomeWelcome" />
+        <activity
+            android:name=".login.WelcomeActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.HomeWelcome" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.HomeIniciar" />
+        <activity
+            android:name=".login.SplashActivity"
+            android:theme="@style/AppTheme.HomeIniciar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".servicos.BootCompletedIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".servicos.MyFireBaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".servicos.ServicoSegundoPlano" />
+    </application>
+
+</manifest>

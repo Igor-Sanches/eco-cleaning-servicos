@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/light_grey_100"
+    android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SelecionadorServicosItensActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:onClick="onBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:tint="@color/grey_60"
+                android:src="@drawable/ic_action_back"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:fontFamily="@font/gotham"
+                android:text="@string/servico"/>
+            <include
+                layout="@layout/icone_carrinho"
+                android:onClick="oncarrinho"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:tint="@color/branco"
+                android:src="@drawable/ic_action_carrinho"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="104dp"
+            android:layout_height="100dp"
+            android:src="@drawable/signup_top" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/layout_principal"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_height="192dp"
+                android:layout_width="match_parent">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/mCollapsingToolbarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:toolbarId="@+id/toolbar"
+                    app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                    app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+                    app:contentScrim="?attr/colorPrimary">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/app_bar_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_gradiant_servico"/>
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="16dp"
+                            android:background="@drawable/btn_acriligo_laranja_circular">
+                            <ImageButton
+                                android:onClick="onShareService"
+                                android:layout_gravity="center"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:src="@drawable/ic_action_share"
+                                app:tint="@color/acriligo_tint_laranja"/>
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:background="@color/branco"
+                android:layout_width="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:src="@drawable/login_top"/>
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:src="@drawable/login_bottom"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <androidx.cardview.widget.CardView
+                            android:layout_gravity="bottom"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <LinearLayout
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_marginEnd="10dp"
+                                    android:orientation="vertical"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:textColor="@color/preto"
+                                        android:fontFamily="@font/gotham"
+                                        android:textSize="8pt"
+                                        android:textStyle="bold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/displayName" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/valorText"
+                                    android:layout_gravity="top"
+                                    app:autoSizeTextType="uniform"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/r_0_00" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.core.widget.NestedScrollView
+                            android:id="@+id/nest_start"
+                            android:layout_marginBottom="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:textColor="@color/grey_60"
+                                        android:fontFamily="@font/gill_sans_mt"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/summary" />
+                                    <TextView
+                                        android:id="@+id/tempo"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/gotham"
+                                        android:paddingTop="10dp"
+                                        android:paddingBottom="10dp"  />
+
+                                </LinearLayout>
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/mRecyclerView" />
+                            </LinearLayout>
+
+                        </androidx.core.widget.NestedScrollView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/branco"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/adicionar_carrinho"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="@color/acriligo_tint_verde"
+                    app:drawableTint="@color/acriligo_tint_verde"
+                    android:text="@string/adicionar_ao_carrinho"
+                    app:drawableStartCompat="@drawable/ic_action_carrinho"
+                    android:background="@drawable/btn_acriligo_verde_quadrado"/>
+            </RelativeLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_conexao_error"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sem_conexao"/>
+            <TextView
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/erro_conexao"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_wifi_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wifi_offline" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/erro_conexao"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:id="@+id/vazio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:src="@drawable/lista_vazia"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+            <TextView
+                android:textAlignment="center"
+                android:fontFamily="@font/gill_sans_mt"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/erro_localizar_pedido" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lyt_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <app.birdsoft.ecocleaningservicos.widget.ViewLoadingDotsBounce
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

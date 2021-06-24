@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "342398093785",
+    "firebase_url": "https://ecocleaningplataform-default-rtdb.firebaseio.com",
+    "project_id": "ecocleaningplataform",
+    "storage_bucket": "ecocleaningplataform.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342398093785:android:b2b815b1c02f97103fb1c8",
+        "android_client_info": {
+          "package_name": "app.birdsoft.ecocleaningservicos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342398093785-hl1kf9f1c97deel11acviiu9lj04bvv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEi7rRAchNKrO9zYtHSw88fVX4XuC02l4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342398093785-hl1kf9f1c97deel11acviiu9lj04bvv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342398093785:android:d39a13d20b3842623fb1c8",
+        "android_client_info": {
+          "package_name": "app.birdsoft.painelecocleaning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342398093785-hl1kf9f1c97deel11acviiu9lj04bvv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEi7rRAchNKrO9zYtHSw88fVX4XuC02l4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342398093785-hl1kf9f1c97deel11acviiu9lj04bvv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

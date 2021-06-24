@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:title="@string/title_notifications">
+
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_action_push"
+            android:key="NOTIFICATION"
+            android:defaultValue="true"
+            app:title="Notificação Push"
+            app:summaryOn="@string/sempre_que_seu_pedido_atualizar_voce_sera_notificado"
+            app:summaryOff="@string/sempre_que_seu_pedido_atualizar_voce_nao_sera_notificado"/>
+
+        <Preference
+            android:icon="@drawable/ic_action_notification"
+            android:key="CONFIGURATION_PUSH"
+            app:dependency="NOTIFICATION"
+            app:title="@string/configurar_notificação_push"/>
+
+    </PreferenceCategory>
+    <Preference
+        android:icon="@drawable/ic_action_sair"
+        android:key="PROFILE_EXIT"
+        android:title="Sair"
+        android:summary="@string/app_exit"/>
+
+    <Preference
+        android:key="BIRDSOFT_KEY"
+        android:layout="@layout/birdsoft_layout"/>
+
+</PreferenceScreen>

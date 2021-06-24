@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorStatusBar">#78916F</color>
+    <color name="colorAccent">#3c7f1e</color>
+    <color name="colorPrimaryDark">#78916F</color>
+    <color name="colorPrimary">#84ab76</color>
+    <color name="grey_40">#666464</color>
+    <color name="grey_10">#665F5F</color>
+    <color name="grey_60">#535353</color>
+    <color name="grey_80">#3D3C3C</color>
+    <color name="overlay_dark_10">#1a000000</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="preto">#000000</color>
+    <color name="acriligo_tint_verde">#3D9717</color>
+    <color name="acriligo_tint_vermelho">#971717</color>
+    <color name="acriligo_tint_laranja">#933517</color>
+    <color name="acriligo_color_verde">#6345E422</color>
+    <color name="acriligo_color_vermelho">#63E42222</color>
+    <color name="acriligo_color_laranja">#63EA5A2D</color>
+    <color name="acriligo_tint_lilais">#612E91</color>
+    <color name="light_grey_100">#eef1f3</color>
+    <color name="branco">#ffffff</color>
+    <color name="vermelho">#F44336</color>
+    <color name="verde">#7FF436</color>
+    <color name="colorStroke">#C2C1C1</color>
+    <color name="translation">#5EE9E9E9</color>
+    <color name="colorAccentGrey">#585858</color>
+    <color name="card_n">#45F44336</color>
+</resources>

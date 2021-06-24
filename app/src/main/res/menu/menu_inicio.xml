@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_action_historicos" android:visible="false" android:id="@+id/historicos" android:title="@string/meus_historicos"/>
+    <item android:icon="@drawable/ic_action_favorito_checked" android:id="@+id/favoritos" android:title="@string/favoritos"/>
+    <item android:icon="@drawable/ic_action_servicos" android:id="@+id/contratos" android:title="@string/meus_contratos"/>
+    <item android:icon="@drawable/ic_action_conta" android:id="@+id/conta" android:title="@string/conta"/>
+ </menu>
